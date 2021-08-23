@@ -10,7 +10,7 @@ const readline = require('readline').createInterface({
 // writes a new txt file in the same directory
 // wx flag will cancel(x) the writeFile fn if file already exists
 const writeNewFile = function (name) {
-  return fs.writeFile(`${name}.txt`, 'You are awesome', { flag: 'wx'}, err => {
+  return fs.writeFile(`./resulting-txt-files/${name}.txt`, 'You are awesome', { flag: 'wx'}, err => {
     if (err && err.code === 'EEXIST') {
       // console.log(err);
       // EEXIST is the error code if a file by the same name exists -- found in err object
